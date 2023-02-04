@@ -19,18 +19,12 @@ variable "tgw_description" {
   description = "Description for Transit Gateway"
 }
 
-variable "vpn_attachment" {
-  type        = string
-  description = "VPC attachment for "
-}
-
-
 variable "tgw_id" {
   type        = string
   description = "Used for TGW attachments"
 }
 
-variable "tgw_attachments" {
+variable "vpc_attachments" {
   type = map(object({
     subnet_ids   = list(string)
     vpc_id       = string
